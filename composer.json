@@ -1,0 +1,21 @@
+{
+
+"name": "vendor-name/miniframework",
+"require": {
+
+    "php": ">=7.0"
+},
+"autors": [{
+
+    "name": "Jeyvson Moreira",
+    "email": "jeyvson@teste.com.br"
+
+}],
+"autoload": {
+    "psr-4":{
+        "App\\": "App/",
+        "MF\\": "vendor/MF/"
+    }
+}
+
+}
