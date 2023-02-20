@@ -27,11 +27,14 @@ class GetPokeInfos extends Model{
                     p.ID_Pokemon
         ";
 
-        return $this->db->query($sql)->fetchAll(\PDO::FETCH_ASSOC);
+        $stmt = $this->db->prepare($sql);
 
+        $stmt->bindValue(':id', $id);
 
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
-
 
 }
 
